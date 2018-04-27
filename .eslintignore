@@ -1,0 +1,5 @@
+/build/
+/platforms/
+/dist/
+/*.js
+/test/unit/coverage/
