@@ -15,7 +15,6 @@ function getEntry (rootSrc, pattern) {
   var files = glob.sync(path.resolve(rootSrc, pattern))
   return files.reduce((res, file) => {
     var info = path.parse(file)
-    console.log(file)
     var key = info.dir.slice(rootSrc.length + 1) + '/' + info.name
     res[key] = path.resolve(file)
     return res
@@ -43,7 +42,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue': 'mpvue',
-      '@': resolve('entry/wechat')
+      '@': resolve('entry/wechat'),
+      '@view':resolve('common/view')
     },
     symlinks: false
   },
