@@ -9,7 +9,12 @@ module.exports = {
     browser: true
   },
   globals: {
-    weex: true
+    weex: true,
+    App:true,
+    Page: true,
+    wx: true,
+    getApp: true,
+    getPage: true
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
